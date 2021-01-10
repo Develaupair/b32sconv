@@ -24,13 +24,13 @@ Force interpretation of main parameter as base32-string: `python3 b32converter.p
 
 ### Exit Codes
 
-`0: No Error`
+`0`: No Error
 
-`1: Unkown error`
+`1`: Unkown error
 
-`2: No parameters received`
+`2`: No parameters received
 
-`3: Wrong use of parameters`
+`3`: Wrong use of parameters
 
 ## *Additional information: 
 - The letters of the __text__ which is supposed to be converted will be interpreted __as lowercase__.
