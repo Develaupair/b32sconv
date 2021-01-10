@@ -1,4 +1,4 @@
-# numerative text converter
+# Numerative Text Converter
 This program is a python3 implementation of a numerative text converter which implements two main functions:
 - convert a text as string to a base 32 decimal number (which can be VERY large)
 - convert a decimal number to text, based on the same given base 32 alphabet as above\n
