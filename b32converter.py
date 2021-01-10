@@ -28,7 +28,7 @@ def decNumberToBaseNString(decNumber,result=""):
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         print("use:", "python <thisfile>", '<"text(string)"|number>')
-        exit(1)
+        exit(2)
     else:
         try:
             number=int(sys.argv[1])//1
@@ -38,3 +38,4 @@ if __name__ == "__main__":
                 print(baseNStringToDecNumber(str(sys.argv[1])))
             except:
                 print("unknown error")
+                exit(1)
