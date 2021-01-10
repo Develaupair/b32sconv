@@ -26,27 +26,40 @@ def decNumberToBaseNString(decNumber,result=""):
     while decNumber>0:rest=(decNumber%len(alphabet));decNumber=((decNumber-rest)//len(alphabet));result=decDigitToChar(int(rest))+result
     return result
 def dprint(text):print(str("DEBUG: "+text+"\n") if DEBUGMODE else "", end='')
+def help(ecode = 0):
+    print('\n@##################@ PYTHON3 NUMERATIVE TEXT CONVERTER @###################@')
+    print('#                                                                          #')
+    print('#   How to use:                                                            #')
+    print('#   python3 b32converter.py [-parameter] text|number                       #')
+    print('#                                                                          #')
+    print('#   Parameters:                                                            #')
+    print('#   i, int, n, num, number --> force interpretation as decimal-number      #')
+    print('#   t, txt, text, s, str, string --> force interpretation as text-string   #')
+    print('#   text|number --> the (b32) text or (b10) number to be processed         #')
+    print('#                                                                          #')
+    print('@##########################################################################@\n')
+    exit(ecode)
 if __name__ == "__main__":
+    if ((sys.argv[0].lower().strip(" ")=="-help")or(sys.argv[0].lower().strip(" ")=="--help")): help()
     if len(sys.argv) == 1:
-        print("use:", "python <thisfile>", '<"text(string)"|number>')
-        exit(2)
+        help(2)
     elif len(sys.argv) >= 3:
         a=sys.argv[1].lower()
         if (a=="-t")or(a=="-txt")or(a=="-text")or(a=="-s")or(a=="-str")or(a=="-string"):
             try:
                 print(baseNStringToDecNumber(str(sys.argv[2].strip("\""))))
             except:
-                print("ERROR: Parameter could not be interpreted as string")
+                print("ERROR: Parameter could not be interpreted as string\n")
                 exit(3)
         elif (a=="-n")or(a=="-num")or(a=="-number")or(a=="-i")or(a=="-int"):
             try:
                 number=int(sys.argv[2])//1
                 print(decNumberToBaseNString(number))
             except:
-                print("ERROR: Parameter could not be interpreted as number")
+                print("ERROR: Parameter could not be interpreted as number\n")
                 exit(3)
         else:
-            print("ERROR: Invalid use of parameters")
+            print("ERROR: Invalid use of parameters\n")
             exit(3)
     else:
         try:
@@ -56,6 +69,6 @@ if __name__ == "__main__":
             try:
                 print(baseNStringToDecNumber(str(sys.argv[1].strip("\""))))
             except:
-                print("ERROR: unknown error")
+                print("ERROR: unknown error\n")
                 exit(1)
     exit(0)
