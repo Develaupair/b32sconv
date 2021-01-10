@@ -12,7 +12,7 @@ This program can also be used with other (also larger or smaller) alphabets, the
 ### Parameters:
 - `i`, `int`, `n`, `num`, `number` - force interpretation as decimal-number
 - `t`, `txt`, `text`, `s`, `str`, `string` - force interpretation as text-string
-- `text` or `number` - the text or number to be processed
+- `text` or `number` - the input to be processed, which is either a text or a decimal number
 - `help` - show the help
 
 ### Examples:
