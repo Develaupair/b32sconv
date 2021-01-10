@@ -1,4 +1,4 @@
-# numerative-text-converter
+# numerative text converter
 This program is a (base 32) string to decimal converter which implements two main functions:
 - convert a text as string to a base 32 decimal number (which can be VERY large)
 - convert a decimal number to text, based on the same given base 32 alphabet as above
