@@ -11,6 +11,14 @@ Furthermore this program can also be used with other (also larger or smaller alp
 # How to convert a number back into text:
 `python3 b32converter.py 1234567890`
 
+# Exit Codes
+
+`0: No Error`
+
+`1: Unkown error`
+
+`2: No arguments received`
+
 
 # Additional information: 
 - The letters of the __text__ which is supposed to be converted will be interpreted __as lowercase__.
