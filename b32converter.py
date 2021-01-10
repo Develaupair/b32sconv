@@ -27,15 +27,16 @@ def decNumberToBaseNString(decNumber,result=""):
     return result
 def dprint(text):print(str("DEBUG: "+text+"\n") if DEBUGMODE else "", end='')
 def help(ecode = 0):
-    print('\n@##################@ PYTHON3 NUMERATIVE TEXT CONVERTER @###################@')
+    print('\n@##############+-->{ PYTHON3 NUMERATIVE TEXT CONVERTER }<--+###############@')
     print('#                                                                          #')
     print('#   How to use:                                                            #')
     print('#   python3 b32converter.py [-parameter] text|number                       #')
     print('#                                                                          #')
     print('#   Parameters:                                                            #')
+    print('#   text|number --> the (b32) text or (b10) number to be processed         #')
     print('#   i, int, n, num, number --> force interpretation as decimal-number      #')
     print('#   t, txt, text, s, str, string --> force interpretation as text-string   #')
-    print('#   text|number --> the (b32) text or (b10) number to be processed         #')
+    print('#   help --> show this help page                                           #')
     print('#                                                                          #')
     print('@##########################################################################@\n')
     exit(ecode)
