@@ -13,5 +13,5 @@ Furthermore this program can also be used with other (also larger or smaller alp
 
 
 # Additional information: 
-- The letters of the text which is supposed to be converted will be __interpreted as lowercase__.
-- __Any other characters__ which are not listed in the alphabet (for instance the letters w, x, y, z or any other characters than letters or numbers), they __will be replaced with a 0__. 
+- The letters of the __text__ which is supposed to be converted will be interpreted __as lowercase__.
+- Any __other characters__ which are not listed in the alphabet (for instance the letters w, x, y, z or any other characters than letters or numbers), they will be __replaced with 0__.
