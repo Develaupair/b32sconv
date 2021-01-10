@@ -5,11 +5,20 @@ This program is a Python 3 implementation of a numerative text converter which p
 
 Furthermore this program can also be used with other (also larger or smaller) alphabets, the preset however is the base 32 alphabet from 0 to 9 and from a to v. If you want to use this program with another alphabet (f.e. the hex-aplhabet), you just have to change the content of the alphabet in the code*.
 
-# How to convert text into a number:
+# How to use
+`python b32converter.py [-parameter] text|number`
+
+# Parameters:
+- i, int, n, num, number --> force interpretation as decimal-number
+- t, txt, text, s, str, string --> force interpretation as text-string
+- text|number --> the text or value to be processed
+
+# Examples:
 `python3 b32converter.py "text"`
 
-# How to convert a number back into text:
-`python3 b32converter.py 1234567890`
+Force interpretation of main parameter as number: `python3 b32converter.py -n 1337` -->   19p (output is text)
+
+Force interpretation of main parameter as string: `python3 b32converter.py -s 1337` --> 35943 (output is number)
 
 # Exit Codes
 
@@ -17,8 +26,9 @@ Furthermore this program can also be used with other (also larger or smaller) al
 
 `1: Unkown error`
 
-`2: No arguments received`
+`2: No parameters received`
 
+`3: Wrong use of parameters`
 
 # *Additional information: 
 - The letters of the __text__ which is supposed to be converted will be interpreted __as lowercase__.

@@ -16,7 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>.
 """
 
-import sys;alphabet = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v']
+import sys;DEBUGMODE=False;alphabet = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v']
 def charToDecDigit(char):return alphabet.index(char.lower())if alphabet.__contains__(char.lower())else 0
 def decDigitToChar(decDigit):return alphabet[(decDigit)%(len(alphabet))]
 def baseNStringToDecNumber(text,result=0):
@@ -25,10 +25,29 @@ def baseNStringToDecNumber(text,result=0):
 def decNumberToBaseNString(decNumber,result=""):
     while decNumber>0:rest=(decNumber%len(alphabet));decNumber=((decNumber-rest)//len(alphabet));result=decDigitToChar(int(rest))+result
     return result
+def dprint(text):print(str("DEBUG: "+text+"\n") if DEBUGMODE else "", end='')
 if __name__ == "__main__":
     if len(sys.argv) == 1:
         print("use:", "python <thisfile>", '<"text(string)"|number>')
         exit(2)
+    elif len(sys.argv) >= 3:
+        a=sys.argv[1].lower()
+        if (a=="-t")or(a=="-txt")or(a=="-text")or(a=="-s")or(a=="-str")or(a=="-string"):
+            try:
+                print(baseNStringToDecNumber(str(sys.argv[2].strip("\""))))
+            except:
+                print("ERROR: Parameter could not be interpreted as string")
+                exit(3)
+        elif (a=="-n")or(a=="-num")or(a=="-number")or(a=="-i")or(a=="-int"):
+            try:
+                number=int(sys.argv[2])//1
+                print(decNumberToBaseNString(number))
+            except:
+                print("ERROR: Parameter could not be interpreted as number")
+                exit(3)
+        else:
+            print("ERROR: Invalid use of parameters")
+            exit(3)
     else:
         try:
             number=int(sys.argv[1])//1
@@ -37,5 +56,6 @@ if __name__ == "__main__":
             try:
                 print(baseNStringToDecNumber(str(sys.argv[1].strip("\""))))
             except:
-                print("unknown error")
+                print("ERROR: unknown error")
                 exit(1)
+    exit(0)
