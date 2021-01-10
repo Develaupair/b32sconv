@@ -13,6 +13,7 @@ _This program can also be used with other (also larger or smaller) alphabets, th
 - `i`, `int`, `n`, `num`, `number` --> force interpretation as decimal-number
 - `t`, `txt`, `text`, `s`, `str`, `string` --> force interpretation as text-string
 - `text`|`number` --> the text or number to be processed
+- `help` --> show the help
 
 ### Examples:
 `python3 b32converter.py "text"`
