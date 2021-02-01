@@ -1,7 +1,7 @@
 # Numerative Text Converter
 ## Purpose
 This program is a Python 3 implementation of a numerative text converter which performs these two main functions:
-- convert a text as string to a base 32 decimal number (which can be VERY large)
+- convert a base 32 text (string) to a decimal number (which can be VERY large)
 - convert a decimal number to text, based on the same given base 32 alphabet as above
 
 This program can also be used with other (also larger or smaller) alphabets, the preset however is the base 32 alphabet from 0 to 9 and from a to v. If you want to use this program with another alphabet (f.e. the hex-aplhabet), you just have to change the content of the alphabet in the code*.
