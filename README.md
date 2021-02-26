@@ -17,7 +17,9 @@ This program can also be used with other (also larger or smaller) alphabets, the
 
 ### Examples:
 `python3 b32converter.py "text"` converts the string to a decimal number
+
 `python3 b32converter.py -n 1337` forces the interpretation of the main parameter as decimal-number --> output is base32-text
+
 `python3 b32converter.py -s 1337` forces the interpretation of the main parameter as base-32 text --> output is decimal number
 
 ### Exit Codes
