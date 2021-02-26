@@ -2,7 +2,7 @@
 ## Purpose
 This program is a Python 3 implementation of a numerative text converter which performs these two main functions:
 - convert a base 32 text (string) to a decimal number (which can be VERY large)
-- convert a decimal number to text, based on the same given base 32 alphabet as above
+- convert a decimal number to a base-32 text string
 
 This program can also be used with other (also larger or smaller) alphabets, the preset however is the base 32 alphabet from 0 to 9 and from a to v. If you want to use this program with another alphabet (f.e. the hex-aplhabet), you just have to change the content of the alphabet in the code*.
 
@@ -16,11 +16,9 @@ This program can also be used with other (also larger or smaller) alphabets, the
 - `help` - show the help
 
 ### Examples:
-`python3 b32converter.py "text"`
-
-Force interpretation of main parameter as decimal-number: `python3 b32converter.py -n 1337` --> 19p (output is base32-text)
-
-Force interpretation of main parameter as base32-string: `python3 b32converter.py -s 1337` --> 35943 (output is decimal-number)
+`python3 b32converter.py "text"` converts the string to a decimal number
+`python3 b32converter.py -n 1337` forces the interpretation of the main parameter as decimal-number --> output is base32-text
+`python3 b32converter.py -s 1337` forces the interpretation of the main parameter as base-32 text --> output is decimal number
 
 ### Exit Codes
 
