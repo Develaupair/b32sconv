@@ -1,6 +1,6 @@
 # Numerative Text Converter
 ## Purpose
-This program is a Python 3 implementation of a numerative text converter which performs these two main functions:
+This program is a Python 3 implementation of a numerative text converter that performs these two main functions:
 - convert a base 32 text (string) to a decimal number (which can be VERY large)
 - convert a decimal number to a base-32 text string
 
@@ -34,4 +34,4 @@ This program can also be used with other (also larger or smaller) alphabets, the
 
 ## *Additional information: 
 - The letters of the __text__ which is supposed to be converted will be interpreted __as lowercase__.
-- Any __other characters__ which are not listed in the alphabet (for instance the letters w, x, y, z or any other characters than letters or numbers), they will be __replaced with 0__.
+- Any __other characters__ which are not listed in the alphabet (for instance the letters w, x, y, z, or any other characters but letters and numbers) will be __replaced with 0__.
