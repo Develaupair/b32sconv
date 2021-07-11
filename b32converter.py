@@ -45,7 +45,7 @@ if __name__ == "__main__":
     if len(sys.argv) == 1:
         help(2)
     elif len(sys.argv) >= 3:
-        a=sys.argv[1].lower()
+        a=sys.argv[1].lower().strip()
         if (a=="-t")or(a=="-txt")or(a=="-text")or(a=="-s")or(a=="-str")or(a=="-string"):
             try:
                 print(baseNStringToDecNumber(str(sys.argv[2].strip("\""))))
